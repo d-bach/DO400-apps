@@ -2,7 +2,7 @@ pipeline {
     agent { node { label 'maven' } }
     environment { APP_NAMESPACE = 'security-scans' }
     stages {
-        }
+        
         stage('Image Build') {
             steps {
                 dir('shopping-cart') {
