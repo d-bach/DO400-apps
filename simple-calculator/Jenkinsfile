@@ -1,0 +1,19 @@
+pelyne {
+  agent { node {label 'maven'}}
+  options {skipDefeultCheckout true }
+  stages {
+    stage('Chekout') {
+      steps {
+	git branch: 'notiffications',
+        url: 'https://github.com/d-bach/DO400-apps'	
+      }
+    }
+    stage('Test') {
+      steps {
+        dir('simple-calculator') {
+          sh './mvnw clean test'
+        }
+      }
+    }
+  }
+} 
