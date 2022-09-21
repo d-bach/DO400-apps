@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Chekout') {
       steps {
-	git branch: 'notiffications',
+	git branch: 'notifications',
         url: 'https://github.com/d-bach/DO400-apps'	
       }
     }
