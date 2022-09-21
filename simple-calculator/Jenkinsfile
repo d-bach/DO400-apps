@@ -1,4 +1,4 @@
-pelyne {
+pipeline {
   agent { node {label 'maven'}}
   options {skipDefeultCheckout true }
   stages {
