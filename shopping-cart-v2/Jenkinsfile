@@ -3,7 +3,7 @@ pipeline {
     environment { APP_NAMESPACE = 'recover' }
     stages {
         stage('Test') {
-            options { timeout(time: 100, unit: 'SECONDS')}
+            options { timeout(time: 110, unit: 'SECONDS')}
             steps {
                 dir('shopping-cart-v2') {
                     sh './mvnw clean test'
