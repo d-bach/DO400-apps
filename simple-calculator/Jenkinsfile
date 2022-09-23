@@ -5,7 +5,7 @@ pipeline {
     stage('Chekout') {
       steps {
 	sendNotification('started', 'team@example.com')
-        git branch: 'notifications',
+        git branch: 'solutions',
         url: 'https://github.com/d-bach/DO400-apps'	
       }
     }
