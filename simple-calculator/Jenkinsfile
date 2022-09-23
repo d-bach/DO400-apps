@@ -24,13 +24,13 @@ pipeline {
               sh './mvnw clean checkstyle:check'
             } catch (Exception e) {
               sendWarningAlert("${STAGE_NAME}", 'dev@example.com')
-              unstable("${STAGE_NAME}" stage failed)
+              unstable("${STAGE_NAME} stage failed!")
             }
           }       
         }
       }
     }  
-  }
+    }
   post {
     failure {
       sendFailureAlert('team@example.com')
